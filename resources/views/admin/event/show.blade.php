@@ -166,8 +166,9 @@
                 </label>
                 <select name="tipe" class="select select-bordered w-full" required>
                     <option value="" disabled selected>Pilih Tipe Ticket</option>
-                    <option value="reguler">Regular</option>
-                    <option value="premium">Premium</option>
+                    @foreach ($tipe_tikets as $tipe_tiket)
+                        <option value="{{ $tipe_tiket->nama }}">{{ ($tipe_tiket->nama) }}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="form-control mb-4">
@@ -207,8 +208,9 @@
                 </label>
                 <select name="tipe" id="edit_tipe" class="select select-bordered w-full" required>
                     <option value="" disabled selected>Pilih Tipe Ticket</option>
-                    <option value="reguler">Regular</option>
-                    <option value="premium">Premium</option>
+                    @foreach ($tipe_tikets as $tipe_tiket)
+                        <option value="{{ $tipe_tiket->nama }}">{{ ($tipe_tiket->nama) }}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="form-control mb-4">
