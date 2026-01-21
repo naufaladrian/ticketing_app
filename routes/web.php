@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\HistoriesController;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\User\EventController as UserEventController;
 use App\Http\Controllers\User\OrderController;
+use App\Http\Controllers\Admin\TipeTiketController;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -34,6 +35,9 @@ Route::middleware('auth')->group(function () {
 
         // Event Management
         Route::resource('events', AdminEventController::class);
+
+        // Tipe Tiket Management
+        Route::resource('tipe_tikets', TipeTiketController::class);
 
         // Tiket Management 
         Route::resource('tickets', TiketController::class);
